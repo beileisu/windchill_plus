@@ -1,46 +1,48 @@
 <idea-plugin>
-  <id>com.huahua.wide</id>
-  <name>windchill develop plus</name>
-  <version>1.0</version>
-  <vendor email="beileisu@126.com" url="http://www.huahua.com">huahua</vendor>
+    <id>com.huahua.wide</id>
+    <name>windchill develop plus</name>
+    <version>1.0</version>
+    <vendor email="beileisu@126.com" url="http://www.huahua.com">huahua</vendor>
 
-  <description>
-    <![CDATA[
+    <description>
+        <![CDATA[
       Enter short description for your plugin here.<br>
       <em>most HTML tags may be used</em>
     ]]>
-  </description>
+    </description>
 
-  <change-notes>
-    <![CDATA[
+    <change-notes>
+        <![CDATA[
       Add change notes here.<br>
       <em>most HTML tags may be used</em>
     ]]>
-  </change-notes>
+    </change-notes>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="173.0"/>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
-  <depends>com.intellij.modules.platform</depends>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
 
-  <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
-  </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
 
-  <actions>
-    <!-- Add your actions here -->
-    <group text="Windchill Plus" id="wide.WindchillPlusGroup" class="com.huahua.wide.action.group.WindchillPlusGroup" popup="true">
-      <reference id="wide.action.ArthasCliGeneraAction" />
-      <separator/>
-      <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
-    </group>
+    <actions>
+        <!-- Add your actions here -->
+        <group id="wide.WindchillPlusGroup" class="com.huahua.wide.action.group.WindchillPlusGroup"
+               text="Windchill Plus" popup="true">
+            <reference id="wide.action.ArthasCliGeneraAction"/>
+            <separator/>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+        </group>
 
-    <action text="ArthasCliGeneraAction" class="com.huahua.wide.action.ArthasCliGeneraAction" id="wide.action.ArthasCliGeneraAction">
-      <add-to-group group-id="wide.WindchillPlusGroup" anchor="first"/>
-    </action>
+        <action class="com.huahua.wide.action.ArthasCliGeneraAction" id="wide.action.ArthasCliGeneraAction"
+                text="Arthas Cli">
+            <add-to-group group-id="wide.WindchillPlusGroup" anchor="first"/>
+        </action>
 
-  </actions>
+    </actions>
 
 </idea-plugin>
