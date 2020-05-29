@@ -33,14 +33,17 @@
 
     <actions>
         <!-- Add your actions here -->
+<!--
         <group id="wide.WindchillPlusGroup" class="com.huahua.wide.action.group.WindchillPlusGroup"
                popup="true">
             <reference id="wide.action.ArthasCliGeneraAction"/>
             <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
         </group>
+-->
 
         <action class="com.huahua.wide.action.ArthasCliGeneraAction" id="wide.action.ArthasCliGeneraAction">
-            <add-to-group group-id="wide.WindchillPlusGroup" anchor="first"/>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+            <add-to-group group-id="ChangesViewPopupMenu" anchor="first" />
         </action>
 
     </actions>
