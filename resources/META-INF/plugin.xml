@@ -23,7 +23,9 @@
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
-    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.ultimate</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
@@ -32,14 +34,12 @@
     <actions>
         <!-- Add your actions here -->
         <group id="wide.WindchillPlusGroup" class="com.huahua.wide.action.group.WindchillPlusGroup"
-               text="Windchill Plus" popup="true">
+               popup="true">
             <reference id="wide.action.ArthasCliGeneraAction"/>
-            <separator/>
             <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
         </group>
 
-        <action class="com.huahua.wide.action.ArthasCliGeneraAction" id="wide.action.ArthasCliGeneraAction"
-                text="Arthas Cli">
+        <action class="com.huahua.wide.action.ArthasCliGeneraAction" id="wide.action.ArthasCliGeneraAction">
             <add-to-group group-id="wide.WindchillPlusGroup" anchor="first"/>
         </action>
 
